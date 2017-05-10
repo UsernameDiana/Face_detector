@@ -1,4 +1,4 @@
-# Pattern recognition with machine learning.
+# Face recognition.
 
 
 Image and pattern recognition can allow computers to translate written text on paper into digital text, 
