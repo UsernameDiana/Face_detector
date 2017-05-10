@@ -1,0 +1,17 @@
+Pattern recognition with machine learning.
+
+03.05
+image segmentation - 
+unsupervised learning - no lable on data, finding clusters by color indiferences
+
+clone openCV source code - face recognition:
+https://github.com/opencv/opencv/blob/master/samples/python/facedetect.py
+
+wich faces are recognized the fastest
+pigment differences between recognized faces (plotting, clusters)
+
+
+Face recognition with OpenCV Tutorial:
+http://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html#preparing-the-data
+
+https://www.youtube.com/watch?v=88HdqNDQsEk
