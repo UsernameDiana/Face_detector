@@ -9,3 +9,7 @@ than data points that belong to other clusters.
 
 In our case, we will be clustering the pixel intensities of a RGB image.
 We will treat these MxN pixels( containing RED, GREEN, BLUE) as our data points and cluster them using k-means.
+
+To execute script in comand line:
+
+$ python color_kmeans.py --image images/jp.png --clusters 3
