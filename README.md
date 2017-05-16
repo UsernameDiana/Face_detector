@@ -28,6 +28,7 @@ import cv2
 etc...
 ```
 3. TODO
+![alt tag](http://www.pyimagesearch.com/wp-content/uploads/2014/05/the-matrix-colors.jpg)
 
 
 ### Packages we will use:
