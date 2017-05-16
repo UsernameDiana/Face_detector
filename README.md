@@ -1,12 +1,8 @@
 # Face recognition.
 
 
-Image and pattern recognition can allow computers to translate written text on paper into digital text, 
-it can help machine vision, robots and other devices to recognize people and objects or areas.  
-Data Mining - The process of analyzing data from different perspectives and summarizing it into useful information.  
-
-
-![alt tag](https://behavior.lbl.gov/sites/behavior.lbl.gov/files/data_mining.png)
+Face detection is a computer technology being used in a variety of applications that identifies human faces in digital images.  
+We will be using Python and OpenCV, which is the most popular library for computer vision, it uses machine learning algorithms to search for faces within a picture.
 
 
 ### Goal
@@ -42,4 +38,3 @@ etc...
 * TensorFlow - for machine learning.
 * Pillow - Python Imaging Library ?
 * Thresholding - thresholding any pixel as black if it is any darker or white if it is lighter then average ?
-# Face_detector
