@@ -1,0 +1,11 @@
+K-means is a clustering algorithm.
+
+The goal is to partition n data points into k clusters. 
+Each of the n data points will be assigned to a cluster with the nearest mean. 
+The mean of each cluster is called its “centroid” or “center”.
+
+Data points inside a particular cluster are considered to be “more similar” to each other,
+than data points that belong to other clusters.
+
+In our case, we will be clustering the pixel intensities of a RGB image.
+We will treat these MxN pixels( containing RED, GREEN, BLUE) as our data points and cluster them using k-means.
