@@ -41,11 +41,13 @@ if __name__ == '__main__':
     args = dict(args)
     cascade_fn = args.get('--cascade', "../../data/haarcascades/haarcascade_frontalface_alt.xml")
     nested_fn  = args.get('--nested-cascade', "../../data/haarcascades/haarcascade_eye.xml")
+    #nested_fn  = args.get('--nested-cascade', "../../data/haarcascades/haarcascade_profileface.xml")
+    #nested_fn  = args.get('--nested-cascade', "../../data/haarcascades/haarcascade_smile.xml")
 
     cascade = cv2.CascadeClassifier(cascade_fn)
     nested = cv2.CascadeClassifier(nested_fn)
 
-    cam = create_capture(video_src, fallback='synth:bg=../data/lena.jpg:noise=0.05')
+    cam = create_capture(video_src, fallback='synth:bg=../sample_images/2.jpg:noise=0.05')
 
     while True:
         ret, img = cam.read()
