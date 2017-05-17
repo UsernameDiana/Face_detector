@@ -14,7 +14,7 @@ pigment differences between recognized faces (plotting, clusters)
 17.05
 Take a picture of each of us, 
 run facedetect
-then give the original pictures fixed size of face (200x200),
+then give the original pictures fixed size of face (20x20),
 save resized images
 run grayscale histogram on the 3 pictures and find treshold value.
 
