@@ -12,11 +12,11 @@ https://github.com/opencv/opencv/blob/master/samples/python/facedetect.py
 pigment differences between recognized faces (plotting, clusters)
 
 17.05
-Take a picture of each of us, 
-run facedetect
-then give the original pictures fixed size of face (20x20),
-save resized images
-run grayscale histogram on the 3 pictures and find treshold value.
+* Take a picture of each of us, 
+* run facedetect
+* then give the original pictures fixed size of face rectangule (30x30),
+* save resized images
+* run grayscale histogram on the 3 pictures and find treshold value.
 
 //scipy.spatial.distance.euclidean
 
