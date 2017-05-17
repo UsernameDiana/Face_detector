@@ -11,3 +11,16 @@ https://github.com/opencv/opencv/blob/master/samples/python/facedetect.py
 2. which faces are recognized the fastest
 pigment differences between recognized faces (plotting, clusters)
 
+17.05
+Take a picture of each of us, 
+run facedetect
+then give the original pictures fixed size of face (200x200),
+save resized images
+run grayscale histogram on the 3 pictures and find treshold value.
+
+//scipy.spatial.distance.euclidean
+
+Live stream also uses the same size rectangule, for face recognition.
+Compute the difference from the live stream video.
+Build the sum of the indiferences, when comparing picture and recognised face from video.
+
