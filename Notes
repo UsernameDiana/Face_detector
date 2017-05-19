@@ -1,7 +1,6 @@
-Face recognition.
+Face detection.
 
 03.05
-image segmentation - 
 unsupervised learning - no lable on data, finding clusters by color indiferences
 1. clone openCV source code - face recognition:
 https://github.com/opencv/opencv/blob/master/samples/python/facedetect.py
@@ -22,3 +21,6 @@ pigment differences between recognized faces (plotting, clusters)
 Build the sum of the indiferences, when comparing picture and recognised face from video.
 array1 - array2
 //scipy.spatial.distance.euclidean
+
+take picture from facedetect, take picture from sample and compares.
+if difference is over X, then compares to the next picture.
