@@ -1,7 +1,7 @@
 import cv2
 
 faceCascade = cv2.CascadeClassifier('../../haarcascades/haarcascade_frontalface_default.xml')
-images = ['../sample_images/1.jpg','../sample_images/2.jpg','../sample_images/3.jpg']
+images = ['1.jpg','2.jpg','3.jpg']
 
 for img in images:
     print(img)
@@ -14,5 +14,5 @@ for img in images:
         cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
         print(x, y, x+w, y+h)
         new_img = image[y:y+h, x:x+w]
-        cv2.imwrite(img, new_img)
+        cv2.imwrite('face_of_'+img, new_img)
 
