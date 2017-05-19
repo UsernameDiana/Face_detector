@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('sample_images/Leonardo.jpg', -1)
-cv2.imshow('Leonardo',img)
+img = cv2.imread('sample_images/1.jpg', -1)
+cv2.imshow('1',img)
 
 color = ('b','g','r')
 for channel,col in enumerate(color):
