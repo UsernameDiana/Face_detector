@@ -2,7 +2,7 @@
 face detection using haar cascades
 
 USAGE:
-    f_dec.py [<video_source>]
+    face_from_video.py [<video_source>]
 '''
 
 import numpy as np
