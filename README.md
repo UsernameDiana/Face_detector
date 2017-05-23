@@ -9,9 +9,7 @@ We will be using Python and OpenCV, which is the most popular library for comput
 Our goal is to use a single pictures of each of our faces, use face-detector on the image, then resize, the image to only our detected face, so we are left with single image, resized to show only our face. Then calculate grey scale histogram and when using web camera or video file with faces, the program should calculate the indifference from the detected face in video and the resized images that the program loops through. then which calculation is the closest to 0, that should be the match.
 
 
-
 ![alt tag](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fsophosnews.files.wordpress.com%2F2015%2F02%2Fface-detection_550.jpg%3Fw%3D640&f=1)
-
 
 
 ### Steps we need to do:
@@ -24,15 +22,13 @@ import cv2
 
 etc...
 ```
-3. TODO
-![alt tag](http://www.pyimagesearch.com/wp-content/uploads/2014/05/the-matrix-colors.jpg)
+3. Run facedetect from opencv on the images, resize each image to the same size as detected face, apply gray scale histogram of each image.  
+
+4. TODO
 
 
 ### Packages we will use:
 * OpenCV - computer vision and machine learning software library.  
 * Matplotlib - package for plotting. 
 * Numpy - package for mathematical calculations. 
-* MeanShift, KMeans for finding colour clusters. 
-* TensorFlow - for machine learning.
-* Pillow - Python Imaging Library ?
 * Thresholding - thresholding any pixel as black if it is any darker or white if it is lighter then average ?
