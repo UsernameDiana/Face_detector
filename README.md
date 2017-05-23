@@ -1,6 +1,5 @@
 # Face recognition.
 
-
 Face detection is a computer technology being used in a variety of applications that identifies human faces in digital images and videos.  
 We will be using Python and OpenCV, which is the most popular library for computer vision, it uses haar cascades to search for faces.
 
@@ -24,7 +23,9 @@ etc...
 ```
 3. Run facedetect from opencv on the images, resize each image to the same size as detected face, apply gray scale histogram of each image.  
 
-4. TODO
+![alt tag](https://scontent.xx.fbcdn.net/v/t34.0-0/p280x280/18644345_10154930437348241_2107617379_n.jpg?_nc_ad=z-m&oh=cee4ab19fcf9316a909e3570ca447fd1&oe=592679D9)
+
+4. Build the sum of the indiferences, when comparing picture and recognised face from video.
 
 
 ### Packages we will use:
@@ -32,3 +33,5 @@ etc...
 * Matplotlib - package for plotting. 
 * Numpy - package for mathematical calculations. 
 * Thresholding - thresholding any pixel as black if it is any darker or white if it is lighter then average ?
+
+### Usage:
