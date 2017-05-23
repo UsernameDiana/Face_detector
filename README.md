@@ -34,4 +34,4 @@ etc...
 * Numpy - package for mathematical calculations. 
 * Thresholding - thresholding any pixel as black if it is any darker or white if it is lighter then average ?
 
-### Usage:
+### Usage of programm:
