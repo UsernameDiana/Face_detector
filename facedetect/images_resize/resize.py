@@ -12,5 +12,5 @@ for img in images:
     for (x, y, w, h) in faces:
         cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
         new_img = image[y:y+h, x:x+w]
+        print(new_img.shape)
         cv2.imwrite('face_of_'+img, new_img)
-

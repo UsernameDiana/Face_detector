@@ -3,11 +3,13 @@ import cv2
 
 face_cascade = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
 
-matyas = cv2.imread('images_resize/face_of_2.jpg')
+matyas = cv2.imread('images_resize/face_of_1.jpg')
+print(matyas.shape)
 gray_matyas = cv2.cvtColor(matyas, cv2.COLOR_BGR2GRAY)
+w, h = gray_matyas.shape
+print(w, h)
 
 cap = cv2.VideoCapture(1)
-match = []
 while True:
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -18,8 +20,8 @@ while True:
         roi_gray = gray[y:y+h, x:x+w]
         roi_color = img[y:y+h, x:x+w]
 
-        resized = cv2.resize(roi_gray, (83, 83), interpolation=cv2.INTER_CUBIC)
-        print(type(roi_gray), resized.shape)
+        resized = cv2.resize(roi_color, (w, h), interpolation=cv2.INTER_CUBIC)
+
         cv2.imwrite('captured_resized_face.jpg', resized)
         cap_face = cv2.imread('captured_reized_face.jpg')
     cv2.imshow('img',img)
