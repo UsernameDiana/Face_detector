@@ -31,7 +31,6 @@ while True:
         resized = cv2.resize(roi_color, (w, h), interpolation=cv2.INTER_CUBIC)
 
         cv2.imwrite('captured_resized_face.jpg', resized)
-        cap_face = cv2.imread('captured_reized_face.jpg')
     cv2.imshow('img',img)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
