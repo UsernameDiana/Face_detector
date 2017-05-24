@@ -35,3 +35,7 @@ etc...
 * Thresholding - thresholding any pixel as black if it is any darker or white if it is lighter then average ?
 
 ### Usage of programm:
+Run in this order:
+1. resize.py - creates template picture
+2. my_face_detect.py - detects face and saves the last face detected before closing program
+3. euclidian_distance.py - takes the templates images and the last face detected and from there computes the distanced and returns the closesd
