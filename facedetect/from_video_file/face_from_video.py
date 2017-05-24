@@ -50,7 +50,7 @@ if __name__ == '__main__':
             resized = cv2.resize(roi_gray, (83, 83), interpolation=cv2.INTER_CUBIC)
             print(type(roi_gray), resized.shape)
             cv2.imwrite('captured_resized_face.jpg', resized)
-            cap_face = cv2.imread('captured_reized_face.jpg')
+
         cv2.imshow('img',img)
         k = cv2.waitKey(30) & 0xff
         if k == 27:
