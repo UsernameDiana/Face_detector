@@ -3,9 +3,17 @@ import cv2
 
 face_cascade = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
 
-matyas = cv2.imread('images_resize/face_of_1.jpg')
+matyas = cv2.imread('images_resize/face_of_2.jpg')
+diana = cv2.imread('images_resize/face_of_3.jpg')
+kristin = cv2.imread('images_resize/face_of_1.jpg')
 print(matyas.shape)
+#print(diana.shape)
+#print(kristin.shape)
+
 gray_matyas = cv2.cvtColor(matyas, cv2.COLOR_BGR2GRAY)
+#gray_diana = cv2.cvtColor(diana, cv2.COLOR_BGR2GRAY)
+#gray_kristin = cv2.cvtColor(kristin, cv2.COLOR_BGR2GRAY)
+
 w, h = gray_matyas.shape
 print(w, h)
 
