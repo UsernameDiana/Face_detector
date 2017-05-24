@@ -5,8 +5,12 @@ img_rgb = cv2.imread('captured_resized_face.jpg')
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
 print(img_gray.shape)
 template = cv2.imread('images_resize/face_of_2.jpg')
-w, h = template[::-1]
+print(template.shape)
 
+w, h,_ = template.shape
+
+
+# comparison in a list, matching a detected face with the templates
 res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
 threshold = 0.8
 loc = np.where( res >= threshold)

@@ -17,7 +17,7 @@ gray_matyas = cv2.cvtColor(matyas, cv2.COLOR_BGR2GRAY)
 w, h = gray_matyas.shape
 print(w, h)
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 while True:
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
