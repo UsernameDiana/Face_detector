@@ -23,7 +23,7 @@ etc...
 ```
 3. Run facedetect from opencv on the images, resize each image to the same size as detected face, apply grayscale histogram of each image.  
 
-![alt tag](https://scontent.xx.fbcdn.net/v/t34.0-0/p280x280/18644345_10154930437348241_2107617379_n.jpg?_nc_ad=z-m&oh=cee4ab19fcf9316a909e3570ca447fd1&oe=592679D9)
+![alt_tag](https://{https://github.com/UsernameDiana/Face_detector/blob/master/histogramsfordocumentaion.jpg})
 
 4. Build the sum of the differences, when comparing picture and recognised face from video.
 
