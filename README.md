@@ -12,7 +12,7 @@ Our goal is to use a single pictures of each of our faces, use face-detector on 
 
 
 ### Steps we need to do:
-1. Getting sample video/images.
+1. Getting sample images.
 
 2. Once we have sample data, we're going to need the Python programming language and OpenCV. Set up the work environment with importing the necessary modules. Work environment has to be in the same folder as the sample data/videos.
 ```Python
