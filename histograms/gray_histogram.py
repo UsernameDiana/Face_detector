@@ -5,7 +5,7 @@ images = ['../facedetect/images_resize/face_of_1.jpg','../facedetect/images_resi
 for image in images:
     gray_img = cv2.imread(image, cv2.IMREAD_GRAYSCALE)
     cv2.imshow('1',gray_img)
-    hist = cv2.calcHist([gray_img],[0],None,[256],[0,256])
+    hist = cv2.calcHist([gray_img],[0],None,[256],[0,256]) # Y - is number of pixels, X - pixel value (gray)
     plt.hist(gray_img.ravel(),256,[0,256])
     plt.title('Histogram for gray scale picture')
     plt.show()
