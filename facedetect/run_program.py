@@ -22,7 +22,7 @@ def face_detection(image_path, path_output_folder, path_cascade, path_to_capture
 
     resize.detect_templ_and_resize_save(image_path, path_output_folder, path_cascade)
     #my_face_detect.detect_from_video_save_resized_face(path_output_folder, path_cascade)
-    euclidian_distance(path_to_temp_resized, path_to_captured_from_video)
+    euclidian_distance.calculate_difference_in_images_recognized(path_to_temp_resized, path_to_captured_from_video)
 
 image_path=["images_resize/1.jpg", "images_resize/2.jpg", "images_resize/3.jpg"]
 path_output_folder = "images_resize"

@@ -1,3 +1,4 @@
+import os
 import cv2
 from scipy.spatial import distance
 
@@ -33,10 +34,18 @@ def calculate_difference_in_images_recognized(path_to_temp_resized=["images_resi
         if ti not in dst_values.keys():
             dst_values[ti] = dst
     closest = min(dst_values.items(), key=lambda x: x[1])[0]
-    print(dst_values)
+    print("RESULTS")
+    print("distance values are: ")
+    print(50 * "_")
+    for img in template_images:
+        value = dst_values[img]
+        image_name = os.path.basename(img)
+        print("Euclidian distance: {} : {}".format(image_name, value))
     result = cv2.imread(closest)
+
     while True:
-        cv2.imshow('Closest', result)
+        cv2.imshow('Detected face is closest to', result)
+
         k = cv2.waitKey(30) & 0xff
         if k == 27:
             break

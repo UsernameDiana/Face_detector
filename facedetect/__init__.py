@@ -1,3 +1,0 @@
-import resize
-#import face_detect_webcam
-import euclidian_distance

@@ -16,12 +16,14 @@ face_cascade = cv2.CascadeClassifier('../../haarcascades/haarcascade_frontalface
 
 diana = cv2.imread('../images_resize/face_of_3.jpg')
 gray_diana = cv2.cvtColor(diana, cv2.COLOR_BGR2GRAY)
-# take with and hight of image, its a tuple!!!!
-w, h = gray_diana.shape
-print(w, h) # 83, 83
 
-if __name__ == '__main__': # wont run if imported as module in another module
+w, h = gray_diana.shape
+
+if __name__ == '__main__':
     print(__doc__)
+
+    print("array dimensions for grayscale temp image: ")
+    print(w, h)  # 85, 85
 
     args, video_src = getopt.getopt(sys.argv[1:], '')
     try:
@@ -34,21 +36,21 @@ if __name__ == '__main__': # wont run if imported as module in another module
 
     match = []
     while True:
-        ret, img = cap.read()
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        ret, frame = cap.read() # ret = return value
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 
         for (x,y,w,h) in faces:
-            cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,255),1)
+            cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,255),1)
             roi_gray = gray[y:y+h, x:x+w]
-            roi_color = img[y:y+h, x:x+w]
+            #roi_color = frame[y:y+h, x:x+w]
 
             resized = cv2.resize(roi_gray, (83, 83), interpolation=cv2.INTER_CUBIC)
             print(type(roi_gray), resized.shape)
             cv2.imwrite('captured_resized_face.jpg', resized)
 
-        cv2.imshow('img',img)
-        k = cv2.waitKey(30) & 0xff
+        cv2.imshow('img',frame)
+        k = cv2.waitKey(35)
         if k == 27:
             break
 
