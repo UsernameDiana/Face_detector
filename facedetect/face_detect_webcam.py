@@ -13,6 +13,12 @@ def detect_from_video_save_resized_face(path_output_folder="facedetect",
             path to cascade depending on what you are interested to detect
         """
 
+    diana = cv2.imread('images_resize/face_of_3.jpg')
+    gray_diana = cv2.cvtColor(diana, cv2.COLOR_BGR2GRAY)
+
+    w, h = gray_diana.shape
+    print("width and height of image: " + w, h)
+
     face_cascade = cv2.CascadeClassifier(path_cascade)
 
     cap = cv2.VideoCapture(0)
@@ -38,23 +44,3 @@ def detect_from_video_save_resized_face(path_output_folder="facedetect",
     cv2.destroyAllWindows()
 
 
-
-
-
-
-
-#--------------------------------------------------
-
-#matyas = cv2.imread('images_resize/face_of_2.jpg')
-#diana = cv2.imread('images_resize/face_of_3.jpg')
-#kristin = cv2.imread('images_resize/face_of_1.jpg')
-#print(matyas.shape)
-#print(diana.shape)
-#print(kristin.shape)
-
-#gray_matyas = cv2.cvtColor(matyas, cv2.COLOR_BGR2GRAY)
-#gray_diana = cv2.cvtColor(diana, cv2.COLOR_BGR2GRAY)
-#gray_kristin = cv2.cvtColor(kristin, cv2.COLOR_BGR2GRAY)
-
-#w, h = gray_matyas.shape
-#print(w, h)

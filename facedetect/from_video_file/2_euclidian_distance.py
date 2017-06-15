@@ -1,4 +1,10 @@
-import numpy as np
+'''
+Calculates distance between the original template and the captured image from video
+
+USAGE:
+    2_euclidian_distance.py
+'''
+
 import cv2
 from scipy.spatial import distance
 
@@ -26,7 +32,7 @@ closest = min(dst_values.items(), key=lambda x: x[1])[0]
 print(dst_values)
 result = cv2.imread(closest)
 while True:
-    cv2.imshow('Closest', result)
+    cv2.imshow('Detected face is closest to', result)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
         break

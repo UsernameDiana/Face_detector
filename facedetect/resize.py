@@ -19,13 +19,14 @@ def detect_templ_and_resize_save(image_path=["images_resize/1.jpg", "images_resi
     images = (image_path)
 
     for img in images:
-        image = cv2.imread(img) # reading each image
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) # convert to grayscale
+        image = cv2.imread(img)
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-        faces = faceCascade.detectMultiScale(gray, 1.3, 5) # detects face using cascades
+        faces = faceCascade.detectMultiScale(gray, 1.3, 5)
 
         for (x, y, w, h) in faces:
-            cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2) # drawing rectangle on top left and bottom right corner
-            new_img = image[y:y+h, x:x+w] # cropping using slice :
+            cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            new_img = image[y:y+h, x:x+w]
+            print("tuple of array dimension: ")
             print(new_img.shape)
             cv2.imwrite(os.path.join(path_output_folder,'face_of_'+img), new_img)

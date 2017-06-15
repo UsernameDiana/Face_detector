@@ -1,30 +1,26 @@
 '''
-face detection using haar cascades
+detects faces using haarcascades from video file and saves the result
 
 USAGE:
-    face_from_video.py [<video_source>]
+    1_detect_face_in_video.py [<video_source>]
 '''
 
-import numpy as np
 import cv2
+import sys
+import getopt
 
 # local modules
 from video import create_capture
 
 face_cascade = cv2.CascadeClassifier('../../haarcascades/haarcascade_frontalface_default.xml')
 
-matyas = cv2.imread('../images_resize/face_of_2.jpg')
 diana = cv2.imread('../images_resize/face_of_3.jpg')
-kristin = cv2.imread('../images_resize/face_of_1.jpg')
-print(diana.shape)
-
 gray_diana = cv2.cvtColor(diana, cv2.COLOR_BGR2GRAY)
-
+# take with and hight of image, its a tuple!!!!
 w, h = gray_diana.shape
-print(w, h)
+print(w, h) # 83, 83
 
-if __name__ == '__main__':
-    import sys, getopt
+if __name__ == '__main__': # wont run if imported as module in another module
     print(__doc__)
 
     args, video_src = getopt.getopt(sys.argv[1:], '')
@@ -34,7 +30,7 @@ if __name__ == '__main__':
         video_src = 0
     args = dict(args)
 
-    cap = create_capture(video_src, fallback='synth:bg=../images_resize/1.jpg:noise=0.05')
+    cap = create_capture(video_src, fallback='synth:bg=../images_resize/3.jpg:noise=0.05')
 
     match = []
     while True:
