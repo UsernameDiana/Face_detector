@@ -14,21 +14,23 @@ captured_image = cv2.imread('captured_resized_face.jpg')
 dst_values = {}
 for temp in template_images:
     template = cv2.imread(temp)
-    t_w, t_h, p = template.shape
+    t_w, t_h, p = template.shape # returns tuple of rows, columns and chanels( gray or color)
 
     capt_image_gray = cv2.cvtColor(captured_image, cv2.COLOR_BGR2GRAY)
     capt_image_gray = cv2.resize(capt_image_gray, (t_w, t_h), interpolation=cv2.INTER_CUBIC)
-    capt_image_gray = capt_image_gray.flatten()
+    capt_image_gray = capt_image_gray.flatten() # returns 1 dimentional array
 
     template_image_gray = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
     template_image_gray = template_image_gray.flatten()
 
     dist = distance.euclidean(capt_image_gray, template_image_gray)
-    dist = dist / (t_w * t_h)
+    dist = dist / (t_w * t_h) # / rows and culomns
+
     if temp not in dst_values.keys():
         dst_values[temp] = dist
 
 closest = min(dst_values.items(), key=lambda x: x[1])[0]
+
 print("RESULTS")
 print("distance values are: ")
 print(50*"_")

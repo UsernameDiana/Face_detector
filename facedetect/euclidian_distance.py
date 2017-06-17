@@ -6,6 +6,7 @@ def calculate_difference_in_images_recognized(path_to_temp_resized=["images_resi
                                               path_to_captured_from_video="captured_resized_face.jpg"):
     """    
         Calculates euclidian distance.
+        
         :param 
         path_to_temp_resized : list
             list of paths to resized template images
@@ -15,9 +16,10 @@ def calculate_difference_in_images_recognized(path_to_temp_resized=["images_resi
 
     template_images = (path_to_temp_resized)
     img_rgb = cv2.imread(path_to_captured_from_video)
+
     dst_values = {}
-    for ti in template_images:
-        template = cv2.imread(ti)
+    for temp in template_images:
+        template = cv2.imread(temp)
         t_w, t_h, p = template.shape
 
         img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
@@ -31,9 +33,12 @@ def calculate_difference_in_images_recognized(path_to_temp_resized=["images_resi
 
         dst = distance.euclidean(img_gray, gray_template)
         dst = dst / (t_w * t_h)
-        if ti not in dst_values.keys():
-            dst_values[ti] = dst
+
+        if temp not in dst_values.keys():
+            dst_values[temp] = dst
+
     closest = min(dst_values.items(), key=lambda x: x[1])[0]
+
     print("RESULTS")
     print("distance values are: ")
     print(50 * "_")

@@ -12,12 +12,16 @@ import euclidian_distance
 def face_detection(image_path, path_output_folder, path_cascade, path_to_captured_from_video, path_to_temp_resized):
 
     """
-    :param image_path: 
-    :param path_output_folder: 
-    :param path_cascade: 
-    :param path_to_captured_from_video: 
-    :param path_to_temp_resized: 
-    :return: 
+    :param image_path: list
+            list of paths to template images
+    :param path_output_folder: str
+            path to output folder for resized img
+    :param path_cascade: str
+            path to cascade classifier
+    :param path_to_captured_from_video: str
+            path to saved and resized img from video
+    :param path_to_temp_resized: list
+            list of path for resized temp images
     """
 
     resize.detect_templ_and_resize_save(image_path, path_output_folder, path_cascade)

@@ -6,6 +6,7 @@ def detect_templ_and_resize_save(image_path=["images_resize/1.jpg", "images_resi
                                  path_cascade="../haarcascades/haarcascade_frontalface_default.xml"):
     """    
     Saves resized image after face detecting.
+    
     :param 
     image_path : list
         list of paths to image
